@@ -1,0 +1,478 @@
+:root { 
+    --main-link-color-rgba: rgba(249, 102, 88, 1);
+    --main-bg-color-rgba: rgba(45, 35, 84, 1);
+    --main-text-color: white;
+    --background-odd-rgba: rgba(211, 92, 115, 1);
+    --background-even-rgba: rgba(124, 108, 164, 1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+section{
+    margin: auto;
+}
+
+main, section, h1, nav, footer{
+    padding: 2%;
+}
+
+.title{
+    font-family: Black-Ops-One;
+}
+
+h2{
+    text-align: center;
+}
+
+html {
+    background-image: url(../images/kid-cudi-banner.jpg);
+    color: var(--main-text-color);
+    line-height: 1.5;
+}
+
+main{
+    padding: 1%;
+    width: 90%;
+    margin:auto;
+    background-color: var(--main-bg-color-rgba);
+}
+
+p {
+    text-indent: 3em;
+}
+
+a{
+    color: var(--main-link-color-rgba);
+}
+
+a:hover{
+    background-color:var(--background-even-rgba);
+    color: var(--main-text-color);
+
+}
+
+h1{
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+#firstHeader2{
+    text-align: center;
+}
+h2{
+    color: var(--main-text-color)
+}
+
+body {
+    margin: 1% auto;
+}
+
+section{
+    clear: both;
+    max-width: 85%;
+    margin-bottom: auto;
+}
+
+footer{
+    grid-area: footer;
+    margin: auto;
+    width:88%;
+    background-color: var(--main-bg-color-rgba);
+}
+
+/* image css */
+
+figure {
+    float: left;
+    text-align: center;
+    width: 30%;
+    border: thin solid;
+    border-color: var(--background-odd-rgba);
+}
+
+img {
+    max-height: 90%;
+    max-width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%; 
+    margin-right: 5%; 
+}
+
+cite{
+    font-size: small;
+}
+
+.rounded {
+    border-radius: 1em;
+}
+
+.go-left {
+    float: left;
+    margin-right: 1%;
+    max-width: 25%;
+}
+
+.go-right {
+    float: right;
+    margin-left: 1%;
+    max-width: 25%;
+}
+
+.go-center {
+    width: 80%;
+    max-width: 100%;
+    margin: 10%;
+}
+
+figcaption{
+    font-size: small;
+}
+
+/* nav css */
+
+nav a:link{
+    color: var(--main-link-color-rgba);
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color:var(--te)
+
+}
+
+nav a{
+    display: inline-block;
+}
+
+nav{
+    border: thin solid;
+    border-bottom: thin solid; 
+    border-color: var(--main-link-color-rgba);
+    text-align: center;
+    background-color: var(--main-bg-color-rgba);
+    width: 88%;
+    margin: auto;
+}
+
+/* table css */
+
+td, th{
+    border: thin solid black;
+    padding: .5em;
+}
+
+tr:nth-child(odd){
+    background-color: var(--background-odd-rgba);
+}
+
+tr:nth-child(even){
+    background-color: var(--background-even-rgba);
+}
+
+table+p {
+    padding-top: 1em;
+}
+
+tr a{
+    color:var(--main-text-color)
+}
+
+table {
+    border-collapse: collapse;
+    border: solid;
+    border-color:var(--background-even-rgba);
+    margin: auto;
+    clear: both;
+}
+
+caption {
+    font-variant: small-caps;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:hover{
+    background-color: var(--main-bg-color-rgba);
+    text-decoration: underline;
+}
+
+/* form page css */
+
+form {
+    background-color: var(--main-bg-color-rgba);
+    border: thin solid black;
+    clear: both;
+    margin: auto;
+    padding: 1%;
+}
+
+form p{
+    text-indent: 0%;;
+}
+
+fieldset {
+    padding: 1%;
+}
+
+/* grid layout */
+
+body{
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "box-1 box-1" "box-2 box-2" "box-3 box-4"
+    "box-5 box-5";
+    grid-template-columns: auto auto;
+}
+
+main.index-main{
+    grid-template-areas: "box-1 box-1" "box-2 box-3" "box-4 box-5";
+    grid-template-columns: auto auto;
+}
+
+main.index-main section{
+    margin: auto;
+}
+
+
+main.form{
+    grid-template-areas: "box-1 box-1" "box-2 box-3" "box-4 box-4" "box-5 box-5"
+}
+
+main.form section.box4{
+    margin: auto;
+    width: 80%
+}
+
+
+main.form p{
+    text-indent: 0%;
+    width: 55%;
+    margin: auto;
+}
+
+main.album-main figure.go-center{
+    width: 50%;
+    max-width: 200px;
+    margin-left: 25%;
+}
+
+main.form figure.go-center{
+    width: 50%;
+    max-width: 50%;
+    margin-left:25%;
+}
+
+
+main.album-main{
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+    "box-1 box-1 box-1" 
+    "box-2 box-4 box-6" 
+    "box-3 box-5 box-7" 
+    "box-8 box-10 box-12" 
+    "box-9 box-11 box-13"
+    "box-14 box-16 box-18"
+    "box-15 box-17 box-19";
+}
+
+main.album-main p{
+    text-indent: 0%;
+}
+
+main.album-main img{
+    max-width: 90%;
+}
+
+main.album-main section{
+    margin: 2%;
+}
+
+main.detail2-main{
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "box-1 box-1" "box-2 box-3" "box-4 box-5"
+
+}
+
+main.detail2-main figure{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.box1{
+    grid-area: box-1;
+}
+
+.box2{
+    grid-area: box-2;
+}
+
+.box3{
+    grid-area: box-3;
+}
+
+.box4{
+    grid-area: box-4;
+}
+
+.box5{
+    grid-area: box-5;
+}
+
+.box6{
+    grid-area: box-6;
+}
+
+.box7{
+    grid-area: box-7;
+}
+
+.box8{
+    grid-area: box-8;
+}
+
+.box9{
+    grid-area: box-9;
+}
+
+.box10{
+    grid-area: box-10;
+}
+
+.box11{
+    grid-area: box-11;
+}
+
+.box12{
+    grid-area: box-12;
+}
+
+.box13{
+    grid-area: box-13;
+}
+
+.box14{
+    grid-area: box-14;
+}
+
+.box15{
+    grid-area: box-15;
+}
+
+.box16{
+    grid-area: box-16;
+}
+
+.box17{
+    grid-area: box-17;
+}
+
+.box18{
+    grid-area: box-18;
+}
+
+.box19{
+    grid-area: box-19;
+}
+
+
+/*form styling*/
+
+legend{
+    margin-top: 1%;
+}
+
+.radio label, .checkbox label{
+    display: inline;
+}
+
+.radio legend, .contact legend, .checkbox legend{
+    margin: 1%;
+    padding: 1%;
+}
+
+.radio input, .checkbox input{
+    width: initial;
+    padding: .5em;
+}
+
+fieldset{
+    background-color: var(--background-even-rgba);
+}
+
+form{
+    background-color: var(--background-even-rgba);
+    border: thin solid;
+    border-color: var(--main-link-color-rgba);
+    width: 70%;
+    margin-left: auto;
+
+}
+
+.contact input{
+    width: 100%;
+}
+
+fieldset{
+    border: none;
+}
+
+ul{
+    text-align: center; 
+    width: 50%;
+    margin-left: 25%;
+ }
+
+ input[type=checkbox] {
+    cursor: pointer;
+ }
+
+ input[type=radio] {
+    cursor: pointer;
+ }
+
+ input[type=submit]{
+    background: var(--main-bg-color-rgba);
+    color: var(--main-text-color);
+    font-size: x-large;
+    margin: auto;
+    padding: 2%;
+    width: 100%;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.activePage{
+    text-decoration: underline;
+    background-color: var(--background-even-rgba);
+    color: var(--main-text-color)
+}
+
+main.form figure.go-center{
+    margin-top:1%;
+    margin-bottom: 1%;
+}
