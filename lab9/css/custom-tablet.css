@@ -1,0 +1,23 @@
+.index-main{
+    grid-template-areas: "box-1 box-1" "box-2 box-2" "box-3 box-3"
+    "box-4 box-4" "box-5 box-5";
+}
+
+main.form{
+    grid-template-areas: "box-1 box-1" "box-2 box-2" "box-3 box-3"
+    "box-4 box-4" "box-5 box-5";
+}
+
+#go-center-phone-tablet{
+    width: 80%;
+    max-width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#go-center-phone-tablet-solar{
+    width: 50%;
+    max-width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+}

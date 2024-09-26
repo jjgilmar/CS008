@@ -1,0 +1,333 @@
+:root { 
+    --main-nav-color-rgba: rgba(200, 230, 255, .8);
+    --main-bg-color-rgba: rgba(255, 255, 255, .8);
+    --nav-bg-color-rgba: rgba(144, 238, 144, .8);
+    --main-text-color: #000000;
+    --background-odd-rgba: rgba(224, 224, 224, .8);
+    --background-even-rgba: rgba(204, 229, 255, .8);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+main, section, h1, h2, nav, footer{
+    padding: 2%;
+}
+
+html {
+    background-image: url(../images/background.jpg);
+    color: var(--main-text-color);
+    line-height: 1.5;
+}
+
+main{
+    padding: 1%;
+    background-color: var(--main-bg-color-rgba);
+}
+
+p {
+    text-indent: 3em;
+}
+
+a:hover{
+    background-color:lightblue;
+}
+
+h1{
+    color: snow;
+    text-transform: uppercase;
+    text-align: center;
+}
+#firstHeader2{
+    text-align: center;
+}
+h2{
+    color: var(--main-text-color)
+}
+
+body {
+    margin: 1% auto;
+    max-width: 50em;
+}
+
+section{
+    clear:both;
+}
+
+footer{
+    margin: auto;
+    background-color: var(--main-bg-color-rgba);
+}
+
+/* image css */
+
+figure {
+    float: left;
+    text-align: center;
+    width: 30%;
+    border: thin solid darkblue;
+}
+
+img {
+    max-height: 90%;
+    max-width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%; 
+    margin-right: 5%; 
+}
+
+cite{
+    font-size: xx-small;
+}
+
+.rounded {
+    border-radius: 1em;
+}
+
+.go-left {
+    float: left;
+    margin-right: 1%;
+    max-width: 25%;
+}
+
+.go-right {
+    float: right;
+    margin-left: 1%;
+    max-width: 25%;
+}
+
+.go-center {
+    width: 50%;
+    max-width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+figcaption{
+    font-size: xx-small;
+}
+
+/* nav css */
+
+nav a:link{
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+nav a{
+    display: inline-block;
+}
+
+nav{
+    border: thin solid darkblue;
+    background-color: var(--main-nav-color-rgba);
+    text-align: center;
+}
+
+/* table css */
+
+td, th{
+    border: thin solid black;
+    padding: .5em;
+}
+
+tr:nth-child(odd){
+    background-color: var(--background-odd-rgba);
+}
+
+tr:nth-child(even){
+    background-color: var(--background-even-rgba);
+}
+
+table+p {
+    padding-top: 1em;
+}
+
+table {
+    max-width:100%;
+    border-collapse: collapse;
+    border: solid black;
+    margin: auto;
+    clear: both;
+}
+
+caption {
+    font-variant: small-caps;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:hover{
+    background-color: lightblue;
+    text-decoration: underline;
+}
+
+/* list css */
+
+li:nth-child(odd) {
+    background-color: var(--background-odd-rgba);
+}
+
+li:nth-child(even) {
+    background-color: var(--background-even-rgba);
+}
+
+/* form page css */
+
+form {
+    background-color: var(--main-bg-color-rgba);
+    border: thin solid black;
+    clear: both;
+    max-width: 30em;
+    margin: auto;
+    padding: 1%;
+}
+
+form p{
+    text-indent: 0%;;
+}
+
+fieldset {
+    padding: 1%;
+}
+
+/* grid layout */
+
+body{
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "box-1 box-1" "box-2 box-2" "box-3 box-4"
+    "box-5 box-5";
+    grid-template-columns: auto auto;
+}
+
+main.form{
+    grid-template-areas: "box-1 box-1" "box-3 box-5" "box-4 box-4"
+}
+
+footer{
+    grid-area: footer;
+    width: 96%;
+}
+
+.box1{
+    grid-area: box-1;
+}
+
+.box2{
+    grid-area: box-2;
+}
+
+.box3{
+    grid-area: box-3;
+}
+
+.box4{
+    grid-area: box-4;
+}
+
+.box5{
+    grid-area: box-5
+}
+
+
+
+/*form styling*/
+
+legend{
+    margin-top: 1%;
+}
+
+.radio label, .checkbox label{
+    display: inline;
+}
+
+.radio legend, .contact legend, .checkbox legend{
+    margin: 1%;
+    padding: 1%;
+}
+
+.radio input, .checkbox input{
+    width: initial;
+    padding: .5em;
+}
+
+fieldset{
+    background-color: var(--background-odd-rgba);
+}
+
+.contact input{
+    width: 100%;
+}
+
+fieldset{
+    border: none;
+}
+form{  
+    background-color:snow;
+}
+
+ul{
+    text-align: center; 
+    width: 50%;
+    margin-left: 25%;
+ }
+
+ input[type=checkbox] {
+    cursor: pointer;
+ }
+
+ input[type=radio] {
+    cursor: pointer;
+ }
+
+ input[type=submit]{
+    background: var(--main-nav-color-rgba);
+    color: var(--main-text-color);
+    font-size: x-large;
+    margin: auto;
+    padding: 2%;
+    width: 100%;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.activePage{
+    background-color: lightblue;
+}
+
+.emissions-pic{
+        width: 100%;
+        max-width: 75%;
+        margin-top: 50%;
+        margin-right: 12.5%;
+        margin-left: 12.5%;
+}
